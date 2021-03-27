@@ -1,9 +1,81 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-wrapper {
+    min-height: calc(100vh - 30px);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.footer {
+    height: 72px;
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+/*header*/
+.header {
+    background-color: #344eff;
+    color: white;
+}
+
+.profile__photo {
+    float: left;
+    width: 141px;
+}
+
+.profile__photo img {
+    border-radius: 50%;
+    width: inherit;
+}
+
+.profile__title {
+
+    float: left;
+    width: 459px;
+}
+
+.profile__name {
+    font-size: 39px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.profile__position {
+    font-size: 23px;
+    line-height: 48px;
+    font-weight: 600;
 }
 
 
+.profile__contacts {
+    float: left;
+    width: 78px;
+}
 
+.profile__contacts_list {
+    position: relative;
+    left: 30px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}

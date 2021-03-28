@@ -118,3 +118,16 @@ h1 {
     width: inherit;
     height: inherit;
 }
+
+/*footer*/
+.footer {
+    background-color: #354fff;
+    color: white;
+}
+
+.footer__text {
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+}

@@ -42,6 +42,9 @@ h1 {
 .profile__photo {
     float: left;
     width: 141px;
+    margin-top: 63px;
+    margin-left: 80px;
+    margin-bottom: 43px;
 }
 
 .profile__photo img {
@@ -51,19 +54,20 @@ h1 {
 
 .profile__title {
     float: left;
-    width: 459px;
+    margin-left: 32px;
+    margin-top: 85px;
 }
 
 .profile__name {
     font-size: 39px;
     line-height: 48px;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.045em;
 }
 
 .profile__position {
     font-size: 23px;
-    line-height: 48px;
+    line-height: 35px;
     font-weight: 600;
 }
 
@@ -71,6 +75,8 @@ h1 {
 .profile__contacts {
     float: left;
     width: 178px;
+    margin-left: 155px;
+    margin-top: 38px;
 }
 
 .profile__contacts_list {
@@ -82,11 +88,45 @@ h1 {
     font-weight: 400;
 }
 
+.profile__contacts_list li {
+    padding: 0 0 9px 0;
+}
+
+.profile__item-location:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f3c5";
+    font-size: 14px;
+    position: absolute;
+    left: -30px;
+    font-weight: 900;
+}
+
+.profile__item-site:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0ac";
+    font-size: 14px;
+    position: absolute;
+    left: -30px;
+    font-weight: 900;
+}
+
+.profile__item-phone:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f879";
+    font-size: 14px;
+    position: absolute;
+    left: -30px;
+    font-weight: 900;
+}
+
+
 /*left column*/
 .column__left {
     float: left;
     width: 250px;
     margin-right: 50px;
+    background-color: rgba(247, 247, 247, 0.4);
+    height: calc(100vh - 72px);
 }
 
 /*right column*/
@@ -105,7 +145,7 @@ h1 {
     width: 241px;
     height: 263px;
     background-color: #fffeff;
-    box-shadow: 0px 0px 34px 0px rgba(133,129,128,0.1);
+    box-shadow: 0px 0px 34px 0px rgba(133, 129, 128, 0.1);
 }
 
 

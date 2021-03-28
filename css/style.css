@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -21,6 +20,10 @@ h1 {
 
 .footer {
     height: 72px;
+}
+
+.clearfix {
+    box-sizing: border-box;
 }
 
 .clearfix::after {
@@ -47,7 +50,6 @@ h1 {
 }
 
 .profile__title {
-
     float: left;
     width: 459px;
 }
@@ -68,14 +70,51 @@ h1 {
 
 .profile__contacts {
     float: left;
-    width: 78px;
+    width: 178px;
 }
 
 .profile__contacts_list {
     position: relative;
-    left: 30px;
+    left: 78px;
     top: 20px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
+}
+
+/*left column*/
+.column__left {
+    float: left;
+    width: 250px;
+    margin-right: 50px;
+}
+
+/*right column*/
+.column__right {
+    float: left;
+    width: 550px;
+}
+
+/*portfolio*/
+.portfolio__list {
+    padding-left: 20px;
+}
+
+.portfolio__item {
+    display: inline-block;
+    width: 241px;
+    height: 263px;
+    background-color: #fffeff;
+    box-shadow: 0px 0px 34px 0px rgba(133,129,128,0.1);
+}
+
+
+.project__preview {
+    width: 242px;
+    height: 167px;
+}
+
+.project__preview img {
+    width: inherit;
+    height: inherit;
 }

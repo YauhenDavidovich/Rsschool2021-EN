@@ -8,6 +8,10 @@ ul, li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -16,16 +20,19 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
     line-height: 48px;
-    font-weight: 500;
+    font-weight: 600;
     color: #000000;
     margin-top: 36px;
     margin-bottom: 12px;
 }
 
-.main-wrapper {
-    min-height: calc(100vh - 30px);
+.wrapper {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+.main-wrapper {
+    min-height: calc(100vh - 72px);
 }
 
 .footer {
@@ -37,8 +44,8 @@ h3 {
 }
 
 .clearfix::after {
-    content: ".";
-    display: block;
+    content: "";
+    display: table;
     clear: both;
     height: 0;
 }
@@ -139,7 +146,7 @@ h3.profile__position {
     width: 265px;
     margin-right: 5px;
     background-color: rgba(247, 247, 247, 0.4);
-    height: calc(100vh - 72px);
+    height: 90%;
     padding-left: 80px;
 }
 
@@ -165,7 +172,7 @@ h3.profile__position {
 }
 
 
-.interests__list>li {
+.interests__list > li {
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
@@ -219,24 +226,35 @@ h3.profile__position {
 
 
 .reference__item_first:after {
-
-    font-family: "Font Awesome 5 Free";
     display: block;
     position: absolute;
     content: "";
-    top:20px;
-    left:5px;
-    bottom:2px;
+    top: 20px;
+    left: 5px;
+    bottom: 2px;
     border-left: 3px solid #d8e2e1;
 }
 
-
-
- .reference__item {
+.reference__item {
     position: relative;
     margin: 0;
     padding-bottom: 1em;
     padding-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(64,60,59,0.6);
+}
+
+.referee {
+    color: #354fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.awards__item {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
 }
 
 /*right column*/

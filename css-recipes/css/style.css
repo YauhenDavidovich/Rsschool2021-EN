@@ -12,6 +12,16 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
 .main-wrapper {
     min-height: calc(100vh - 30px);
     max-width: 1024px;
@@ -65,10 +75,13 @@ h1 {
     letter-spacing: 0.045em;
 }
 
-.profile__position {
+h3.profile__position {
     font-size: 23px;
     line-height: 35px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #fffeff;
+    margin-top: 2px;
+    letter-spacing: -1px;
 }
 
 
@@ -123,10 +136,107 @@ h1 {
 /*left column*/
 .column__left {
     float: left;
-    width: 250px;
-    margin-right: 50px;
+    width: 265px;
+    margin-right: 5px;
     background-color: rgba(247, 247, 247, 0.4);
     height: calc(100vh - 72px);
+    padding-left: 80px;
+}
+
+
+.profile-info__title:before, .interests__title:before, .reference__title:before, .awards__title:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0b1";
+    font-size: 16px;
+    font-weight: 900;
+    padding: 15px 15px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: #344eff;
+    color: #fffeff;
+}
+
+.profile-info__text {
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #000000;
+    width: 250px;
+}
+
+
+.interests__list>li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    position: relative;
+    width: 75px;
+    padding-top: 72px;
+    margin-right: 10px;
+
+}
+
+.interests__item:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-size: 19pt;
+    color: #3449dc;
+    border-radius: 50%;
+    font-weight: 700;
+    border: 6px solid #344eff;
+    padding: 8px;
+    bottom: 34px;
+}
+
+.interests__item--music:before {
+    content: "\f58f";
+}
+
+.interests__item--gaming:before {
+    content: "\f11b";
+}
+
+.interests__item--biking:before {
+    content: "\f21c";
+}
+
+
+.reference__item:before {
+
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 24px;
+    width: 8px;
+    content: '\f192';
+    color: #d8e2e1;
+    bottom: -30px;
+}
+
+
+.reference__item_first:after {
+
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    position: absolute;
+    content: "";
+    top:20px;
+    left:5px;
+    bottom:2px;
+    border-left: 3px solid #d8e2e1;
+}
+
+
+
+ .reference__item {
+    position: relative;
+    margin: 0;
+    padding-bottom: 1em;
+    padding-left: 20px;
 }
 
 /*right column*/

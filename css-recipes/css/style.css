@@ -8,8 +8,14 @@ ul, li {
     list-style: none;
 }
 
+
+a:active,
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: rgba(223, 32, 29, 0.6);
 }
 
 h1 {
@@ -121,6 +127,14 @@ h3.profile__position {
 
 .profile__contacts_list li {
     padding: 0 0 9px 0;
+}
+
+.profile__contacts_list a {
+    color: #fffeff;
+}
+
+.profile__contacts_list a:hover {
+    color: rgba(223, 32, 29, 0.6);
 }
 
 .profile__item-location:before {
@@ -308,7 +322,7 @@ h3.profile__position {
 }
 
 .portfolio__item:hover {
-    box-shadow: 0px 0px 34px 0px rgba(35,48,118,0.6);
+    box-shadow: 0px 0px 34px 0px rgba(35, 48, 118, 0.6);
 }
 
 

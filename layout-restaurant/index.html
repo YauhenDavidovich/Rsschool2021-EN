@@ -200,6 +200,50 @@
             </article>
         </div>
     </section>
+    <section class="reservations wrapper">
+        <div class="reservations__wrapper">
+            <div class="reservations__image-items">
+                <img class="reservations__image-item" src="./assets/image/dessert-1.png" alt="dessert-1">
+                <img class="reservations__image-item" src="./assets/image/dessert-2.png" alt="dessert-2">
+            </div>
+            <div class="reservations__article">
+                <h3 class="reservations__title">Just the right food</h3>
+                <div class="reservations__text-container">
+                    <p class="reservations__text">If you’ve been to one of our restaurants, you’ve seen – and tasted –
+                        what keeps our customers coming back for more. Perfect materials and freshly baked food.</p>
+                    <p class="reservations__text">Delicious Lambda cakes, muffins, and gourmet coffees make us hard to
+                        resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
+                </div>
+                <form class="reservations__form" method="post">
+                    <fieldset class="forms__items">
+                        <label class="forms__item">
+                            <p class="forms__title">Name</p>
+                            <input class="forms__input" type="text" name="name" placeholder="your name *" tabindex="1"
+                                   required="">
+                        </label>
+                        <label class="forms__item">
+                            <p class="forms__title">Email</p>
+                            <input class="forms__input" type="email" name="email" placeholder="your email *"
+                                   required="">
+                        </label>
+                        <label class="forms__item">
+                            <p class="forms__title">Date</p>
+                            <input class="forms__input" type="date" name="date" required="">
+                        </label>
+                        <label class="forms__item">
+                            <p class="forms__title">Party number</p>
+                            <select class="forms__input" name="number">
+                                <option value="0" selected="selected">party number</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <button class="forms__btn" type="submit">Book now!</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 </main>
 <footer class="footer">

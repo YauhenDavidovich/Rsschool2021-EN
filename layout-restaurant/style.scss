@@ -1,4 +1,6 @@
-$color-primary: #F1CDB3;
+$color-primary: #ffffff;
+$color-gold: #dab33e;
+$color-gold-hover: #DAC07A;
 
 *,
 *::before,
@@ -13,9 +15,107 @@ $color-primary: #F1CDB3;
 }
 
 .wrapper {
-  display: flex;
   margin: 0 auto;
-  max-width: 120rem;
-  justify-content: space-between;
+  max-width: 160rem;
   width: 100%;
 }
+
+
+li {
+  list-style-type: none;
+}
+
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+h1 {
+  color: $color-primary;
+  font-family: "Yeseva One", cursive;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+//Header
+.header__wrapper {
+  width: 100%;
+  position: absolute;
+  top: 6.1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  max-width: 120.6rem;
+  margin: 0 auto 0 17.9rem;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 23.9rem;
+}
+
+.header-menu__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 71rem;
+  width: 100%;
+}
+
+.header-social__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 8.1rem;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.list__link {
+  color: $color-primary;
+  font-family: "Gentium Book Basic";
+  font-size: 21px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.list__link:hover {
+  border-bottom: 2px solid $color-primary;
+  cursor: pointer;
+}
+
+.social__link {
+  color: $color-gold;
+  font-size: 2.1rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.social__link:hover {
+  color: $color-primary;
+  cursor: pointer;
+}
+
+
+
+
+
+//Promo
+.promo__wrapper {
+  background-image: url(./assets/images/Bg.png);
+  background-repeat: no-repeat;
+  height: 75rem;
+}
+

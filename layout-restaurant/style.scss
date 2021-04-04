@@ -1,6 +1,12 @@
 $color-primary: #ffffff;
+$color-primary-transparent: rgba(255,255,255,0.45);
+$color-primary-transparent-hover: rgba(255,255,255,0.65);
 $color-gold: #dab33e;
 $color-gold-hover: #DAC07A;
+$color-dark: #000000;
+$color-dark-transparent: rgba(0,0,0,0.5);
+
+
 
 *,
 *::before,
@@ -81,7 +87,7 @@ h1 {
 
 .list__link {
   color: $color-primary;
-  font-family: "Gentium Book Basic";
+  font-family: 'Gentium Book Basic', serif;
   font-size: 21px;
   font-weight: 700;
   font-style: normal;
@@ -109,13 +115,74 @@ h1 {
 }
 
 
-
-
-
 //Promo
-.promo__wrapper {
+.promo {
   background-image: url(./assets/images/Bg.png);
   background-repeat: no-repeat;
   height: 75rem;
 }
 
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 96rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 23.9rem;
+}
+
+.promo__item {
+  opacity: 0.92;
+  text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.64);
+  color: #ffffff;
+  font-family: "Yeseva One", cursive;
+  font-size: 9rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.promo__link-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 48.6rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.promo__link {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2.3rem 5.2rem 2.1rem;
+  color: $color-primary;
+}
+
+
+.button-black {
+  border: 1px solid $color-dark-transparent;
+  background-color: $color-dark-transparent;
+  &:hover {
+    background-color: $color-primary-transparent-hover;
+  }
+}
+
+
+.button-white {
+  border: 1px solid $color-primary;
+  background-color: $color-primary-transparent;
+  &:hover {
+    background-color: $color-primary-transparent-hover;
+  }
+}

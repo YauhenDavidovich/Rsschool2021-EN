@@ -178,7 +178,7 @@ h1 {
 .about {
   background-image: url(./assets/images/pattern_fon.png);
   background-repeat: no-repeat;
-  height: 81rem;
+  height: 71rem;
 }
 
 .about__wrapper {
@@ -229,6 +229,71 @@ h1 {
 
 .about__image-cook {
   margin-top: 5.2rem;
+}
+
+.ingredients {
+  background-image: url(./assets/images/bg_2.png);
+  background-repeat: no-repeat;
+  height: 75.8rem;
+  padding-top: 10rem;
+}
+
+.ingredients__wrapper {
+  max-width: 57rem;
+  width: 100%;
+  height: 55.7rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 81.5rem;
+}
+
+.ingredients__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredients__title {
+  color: #ffffff;
+  font-family: "Yeseva One", cursive;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  margin-top: 8.1rem;
+}
+.ingredients__title:after {
+  line-height: 0;
+  display: block;
+  margin: 30px 0;
+  content: url(./assets/icons/Divider-2.png);
+}
+
+.ingredients__text {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2.4rem;
+  text-align: center;
+  max-width: 40.9rem;
+  width: 100%;
+}
+
+.ingredients__image-items {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.ingredients__image-item {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

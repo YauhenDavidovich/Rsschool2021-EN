@@ -5,6 +5,7 @@ $color-gold: #dab33e;
 $color-gold-hover: #DAC07A;
 $color-gold-dark: #cc9900;
 $color-gold-light: #c89f2d;
+$color-gold-light-transparent: rgba(200, 159, 45, 0.7);
 $color-dark: #000000;
 $color-dark-transparent: rgba(0, 0, 0, 0.5);
 $color-dark-x: #4c4c4c;
@@ -339,7 +340,8 @@ h1 {
 .menu {
   background-image: url(./assets/images/pattern_fon-2.png);
   background-repeat: no-repeat;
-  height: 99.4rem;
+  max-height: 99.4rem;
+  height: 100%;
 }
 
 
@@ -352,15 +354,22 @@ h1 {
   margin: 0 auto;
   box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
   background-image: linear-gradient(-226deg, rgba(32, 90, 91, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
-  padding: 0 27.1rem;
+  padding-left: 27.1rem;
+  padding-right: 23.3rem;
+  padding-top: 11rem;
 }
-
 
 .submenu {
-  width: 40%;
-  margin-bottom: 20px;
+  width: 49.5rem;
+  margin-bottom: 4.6rem;
 }
 
+.submenu-item {
+  margin-bottom: 2.75rem;
+  margin-right: 4rem;
+  padding-left: 1.2rem;
+  padding-right: 1rem;
+}
 
 .submenu__title {
   color: $color-gold-dark;
@@ -371,24 +380,31 @@ h1 {
   letter-spacing: normal;
   line-height: 2.4rem;
   text-align: center;
+  margin-right: 4rem;
+
+  &:after {
+    line-height: 0;
+    display: block;
+    margin: 2.1rem 0;
+    content: url(./assets/icons/Divider.png);
+  }
 }
 
 .submenu-item__title {
   color: $color-gold-light;
   font-family: "Yeseva One", cursive;
   font-size: 2.1rem;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
   display: flex;
   justify-content: space-between;
+  padding-top: 1rem;
+}
 
-  &:after {
-    line-height: 0;
-    display: block;
-    margin: 1.5rem 0;
-    content: url(./assets/icons/Divider.png);
-  }
+.submenu-item__title_special {
+  padding-top: 0.5rem;
 }
 
 
@@ -405,9 +421,30 @@ h1 {
   display: block;
   width: 100%;
   height: 0.1rem;
-  margin: 1.2rem 0;
+  margin: 0.8rem 0;
   content: '';
-  background-color: $color-gold-light;
+  background-color: $color-gold-light-transparent;
+}
+
+.special {
+  position: relative;
+  padding: 0.1rem 1rem 1rem;
+  border: 1px rgba(200, 159, 45, .35) solid;
+  margin-bottom: 2rem;
+
+}
+
+.special:before {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  position: absolute;
+  top: -27px;
+  right: -0.1rem;
+  display: block;
+  padding: 0.5rem 1.3rem;
+  content: 'Special';
+  color: $color-primary;
+  background-color: $color-gold-light-transparent;
 }
 
 

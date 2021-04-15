@@ -9,7 +9,7 @@ $color-gold-light-transparent: rgba(200, 159, 45, 0.7);
 $color-dark: #000000;
 $color-dark-transparent: rgba(0, 0, 0, 0.5);
 $color-dark-x: #4c4c4c;
-
+$color-light: #dde0df;
 
 *,
 *::before,
@@ -243,7 +243,7 @@ h1 {
   &:after {
     line-height: 0;
     display: block;
-    margin: 30px 0;
+    margin: 3rem 0;
     content: url(./assets/icons/Divider.png);
   }
 }
@@ -340,7 +340,6 @@ h1 {
 .menu {
   background-image: url(./assets/images/pattern_fon-2.png);
   background-repeat: no-repeat;
-  //padding: 10rem 0;
   max-height: 99.4rem;
   height: 100%;
 }
@@ -351,9 +350,7 @@ h1 {
   margin: 0 auto;
   box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
   background-image: linear-gradient(-226deg, rgba(32, 90, 91, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
-  padding-left: 27.1rem;
-  padding-right: 23.3rem;
-  padding-top: 11rem;
+  padding: 11rem 23.3rem 10rem 27.1rem;
 }
 
 .menu__inner {
@@ -365,9 +362,11 @@ h1 {
 
 .submenu {
   width: 49.5rem;
+
   &:first-child {
     margin-bottom: 4.5rem;
   }
+
   &:last-child {
     margin-top: -10rem;
   }
@@ -452,14 +451,77 @@ h1 {
   top: -2.1rem;
   right: -0.1rem;
   display: block;
-  padding: 0.05rem 1.3rem;
-  padding-bottom: 0.3rem;
+  padding: 0.05rem 1.3rem 0.3rem;
   content: 'Special';
   color: $color-primary;
   background-color: $color-gold-light-transparent;
 }
 
 
+//reviews
+
+.reviews {
+  background-image: url(./assets/images/bg_3.png);
+  background-repeat: no-repeat;
+  max-height: 99.4rem;
+  height: 100%;
+}
+
+.reviews__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.review__article {
+  width: 77rem;
+  height: 55.7rem;
+  background-image: url(./assets/images/bg_rewievs.png);
+  margin: 0 auto;
+  padding-left: 7.3rem;
+  padding-right: 7.3rem;
+  padding-top: 7.7rem;
+}
+
+.review__title {
+  color: $color-primary;
+  font-family: "Yeseva One", cursive;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+
+  &:after {
+    line-height: 0;
+    display: block;
+    margin: 1.7rem 0;
+    content: url(./assets/icons/Divider-2.png);
+  }
+}
 
 
+.review__text {
+  color: $color-light;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 4.5rem;
+  text-align: center;
+}
 
+.review__source {
+  color: $color-light;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding-top: 3rem;
+}

@@ -417,8 +417,6 @@ h1 {
 .reviews {
   background-image: url(./assets/images/bg_3.png);
   background-repeat: no-repeat;
-  max-height: 99.4rem;
-  height: 100%;
 }
 
 .reviews__wrapper {
@@ -476,6 +474,30 @@ h1 {
   line-height: normal;
   text-align: center;
   padding-top: 3rem;
+}
+
+.reservations {
+  background-image: url(./assets/images/pattern_fon-2.png);
+  background-repeat: no-repeat;
+}
+
+.reservations__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
+  background-image: linear-gradient(-226deg, rgba(32, 90, 91, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
+  padding: 11rem 23.3rem 10rem 27.1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.reservations__image-items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 57rem;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

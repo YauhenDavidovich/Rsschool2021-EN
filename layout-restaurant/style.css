@@ -619,5 +619,9 @@ select {
   line-height: normal;
   text-align: center;
 }
+.forms__btn:hover {
+  cursor: pointer;
+  background-color: #DAC07A;
+}
 
 /*# sourceMappingURL=style.css.map */

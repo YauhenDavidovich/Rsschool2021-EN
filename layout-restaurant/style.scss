@@ -559,7 +559,7 @@ h1 {
 
 
 .reservations__article {
-display: flex;
+  display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
@@ -586,7 +586,7 @@ display: flex;
   }
 }
 
-.reservations__text {  ;
+.reservations__text {;
   color: $color-dark-x;
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
@@ -653,12 +653,12 @@ input[type="date"]::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator{
+input[type="date"]::-webkit-calendar-picker-indicator {
   background: none;
   padding: 0;
 }
 
-input[type='text'], input[type="email"]{
+input[type='text'], input[type="email"] {
   background: none;
 }
 
@@ -685,4 +685,9 @@ select {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-gold-hover;
+  }
 }

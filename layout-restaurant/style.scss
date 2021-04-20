@@ -1,4 +1,5 @@
 $color-primary: #ffffff;
+$color-primary-2: #fefefe;
 $color-primary-transparent: rgba(255, 255, 255, 0.45);
 $color-primary-transparent-hover: rgba(255, 255, 255, 0.65);
 $color-gold: #dab33e;
@@ -13,6 +14,7 @@ $color-dark-x: #4c4c4c;
 $color-light: #dde0df;
 $color-form-placeholder-text: #7c7c7c;
 $color-form-placeholder-border: #c8c6c6;
+$color-black: #191919;
 
 
 *,
@@ -690,4 +692,61 @@ select {
     cursor: pointer;
     background-color: $color-gold-hover;
   }
+}
+
+//Footer
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-black;
+  padding: 6.1rem 29.9rem 7.2rem 23rem;
+}
+
+.footer-item {
+  max-width: 34.3rem;
+  width: 100%;
+  text-align: center;
+}
+.footer__title {
+  color: $color-primary-2;
+  font-family: "Yeseva One", cursive;
+  font-size: 2.1rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.about-us.footer__title:after {
+  line-height: 0;
+  display: block;
+  margin-top: 1.7rem;
+  content: url(./assets/icons/Divider-2.png);
+}
+
+.footer__text {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2.4rem;
+  text-align: center;
+  padding-top: 6.3rem;
+}
+
+.about-us.footer__text {
+  padding-top: 2.3rem;
+}
+
+ul.social-icons li {
+  display: inline-block;
+  text-align: center;
+  line-height: 3.6rem;
+  margin-bottom: 0;
+  padding: 0 5px;
+  a {color: $color-primary-2;}
+
 }

@@ -6,6 +6,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Yeseva+One&display=swap"
           rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
     <script src="https://kit.fontawesome.com/3f016a85cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -217,30 +220,35 @@
                         resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
                 </div>
                 <form class="reservations__form" method="post">
-                    <fieldset class="forms__items">
-                        <label class="forms__item">
-                            <p class="forms__title">Name</p>
-                            <input class="forms__input" type="text" name="name" placeholder="your name *" tabindex="1"
-                                   required="">
-                        </label>
-                        <label class="forms__item">
-                            <p class="forms__title">Email</p>
-                            <input class="forms__input" type="email" name="email" placeholder="your email *"
-                                   required="">
-                        </label>
-                        <label class="forms__item">
-                            <p class="forms__title">Date</p>
-                            <input class="forms__input" type="date" name="date" required="">
-                        </label>
-                        <label class="forms__item">
-                            <p class="forms__title">Party number</p>
-                            <select class="forms__input" name="number">
-                                <option value="0" selected="selected">party number</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
-                        </label>
-                    </fieldset>
+                    <div class="forms__items">
+                        <div class="form-item__inner">
+                            <label class="forms__item">
+                                <p class="forms__title">Name</p>
+                                <input class="forms__input" type="text" name="name" placeholder="your name *"
+                                       tabindex="1"
+                                       required="">
+                            </label>
+                            <label class="forms__item">
+                                <p class="forms__title">Email</p>
+                                <input class="forms__input" type="email" name="email" placeholder="your email *"
+                                       required="">
+                            </label>
+                        </div>
+                        <div class="form-item__inner">
+                            <label class="forms__item">
+                                <p class="forms__title">Date</p>
+                                <input class="forms__input calendar" type="date" name="date" required="">
+                            </label>
+                            <label class="forms__item">
+                                <p class="forms__title">Party number</p>
+                                <select class="forms__input" name="number">
+                                    <option value="0" selected="selected">party number</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
                     <button class="forms__btn" type="submit">Book now!</button>
                 </form>
             </div>

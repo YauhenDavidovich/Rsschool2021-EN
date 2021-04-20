@@ -500,4 +500,124 @@ h1 {
   width: 100%;
 }
 
+.reservations__article {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  max-width: 43rem;
+}
+
+.reservations__title {
+  color: #cc9900;
+  font-family: "Yeseva One", cursive;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2.4rem;
+  text-align: center;
+}
+.reservations__title:after {
+  line-height: 0;
+  display: block;
+  margin: 1.7rem 0;
+  content: url(./assets/icons/Divider.png);
+}
+
+.reservations__text {
+  color: #4c4c4c;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.reservations__form {
+  width: 100%;
+  max-width: 43rem;
+  text-align: center;
+}
+
+.form-item__inner {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.forms__item {
+  position: relative;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+
+.forms__item:last-child {
+  margin-right: 0;
+}
+
+.forms__title {
+  color: #c9a131;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.forms__input {
+  width: 20rem;
+  height: 3.6rem;
+  border: 1px solid #c8c6c6;
+  color: #7c7c7c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  padding-left: 1.6rem;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  background: none;
+  padding: 0;
+}
+
+input[type=text], input[type=email] {
+  background: none;
+}
+
+select {
+  background: none;
+}
+
+.calendar {
+  background: url(assets/icons/calendar.png) no-repeat scroll 17rem 1rem;
+}
+
+.forms__btn {
+  width: 20rem;
+  height: 3.6rem;
+  border: 1px solid #c89f2d;
+  background-color: #c89f2d;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

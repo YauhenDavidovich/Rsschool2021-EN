@@ -271,12 +271,12 @@ h1 {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
-  margin-top: 8.1rem;
+  margin-top: 7.6rem;
 }
 .ingredients__title:after {
   line-height: 0;
   display: block;
-  margin: 30px 0;
+  margin: 1.5rem 0 2.5rem;
   content: url(./assets/icons/Divider-2.png);
 }
 
@@ -296,7 +296,7 @@ h1 {
 .ingredients__image-items {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 6.6rem;
 }
 
 .ingredients__image-item {

@@ -237,7 +237,9 @@
                         <div class="form-item__inner">
                             <label class="forms__item">
                                 <p class="forms__title">Date</p>
-                                <input class="forms__input calendar" type="date" name="date" required="">
+                                <input class="forms__input calendar"  name="date" placeholder="date*" required=""
+                                       onfocus="(this.type='date')"
+                                       onblur="(this.type='text')">
                             </label>
                             <label class="forms__item">
                                 <p class="forms__title">Party number</p>

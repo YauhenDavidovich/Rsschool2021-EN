@@ -42,8 +42,7 @@ class IntBuilder extends baseBuilder {
     }
 
     random(from, to) {
-        this.value = Math.floor(Math.random() * (to -from) + from)
-        return this
+        return Math.floor(Math.random() * (to -from) + from);
     }
 
 }

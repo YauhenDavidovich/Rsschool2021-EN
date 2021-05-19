@@ -18,4 +18,14 @@ class IntBuilder extends baseBuilder {
         }
         return this;
     }
+
+    minus(...values) {
+        for (let n of values) {
+            this.value -= n;
+        }
+        return this;
+    }
 }
+
+
+console.log(intBuilder.get())

@@ -41,6 +41,11 @@ class IntBuilder extends baseBuilder {
         return this
     }
 
+    random(from, to) {
+        this.value = Math.floor(Math.random() * (to -from) + from)
+        return this
+    }
+
 }
 
 let intBuilder = new IntBuilder(10);
@@ -50,6 +55,8 @@ intBuilder
     .multiply(2)
     .divide(4)
     .mod(5)
+    .random(1,5)
+
 
 
 console.log(intBuilder.get())

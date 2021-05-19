@@ -26,9 +26,25 @@ class IntBuilder extends baseBuilder {
         return this;
     }
 
-    multiply(value) {
-        return this.value *= value;
+    multiply(n) {
+        this.value *= n;
+        return this
+    }
+
+    divide(n) {
+        this.value /= n;
+        return this
     }
 
 }
+
+let intBuilder = new IntBuilder(10);
+intBuilder
+    .plus(2, 3, 2)
+    .minus(1, 2)
+    .multiply(2)
+    .divide(2)
+
+
+console.log(intBuilder.get())
 

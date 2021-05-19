@@ -25,7 +25,10 @@ class IntBuilder extends baseBuilder {
         }
         return this;
     }
+
+    multiply(value) {
+        return this.value *= value;
+    }
+
 }
 
-
-console.log(intBuilder.get())

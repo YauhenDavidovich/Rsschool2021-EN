@@ -36,6 +36,11 @@ class IntBuilder extends baseBuilder {
         return this
     }
 
+    mod(n) {
+        this.value %= n;
+        return this
+    }
+
 }
 
 let intBuilder = new IntBuilder(10);
@@ -43,7 +48,8 @@ intBuilder
     .plus(2, 3, 2)
     .minus(1, 2)
     .multiply(2)
-    .divide(2)
+    .divide(4)
+    .mod(5)
 
 
 console.log(intBuilder.get())

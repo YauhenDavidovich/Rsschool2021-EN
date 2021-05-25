@@ -80,11 +80,20 @@ StringBuilder.prototype.multiply = function(int) {
     return this
 }
 
+StringBuilder.prototype.divide  = function(n) {
+    const divider = Math.floor(this.value.length / n)
+    this.value = this.value.slice(0, divider)
+    return this
+}
+
+
 let strBuilder = new StringBuilder('Hello'); // 'Hello';
 strBuilder
     .plus(' all', '!')
     .minus(4)
     .multiply(3)
+    .divide(4)
+
 
 // let intBuilder = new IntBuilder(10);
 // intBuilder

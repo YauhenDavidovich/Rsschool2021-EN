@@ -55,6 +55,7 @@ function StringBuilder(value = '') {
 
 StringBuilder.prototype = Object.create(baseBuilder.prototype);
 StringBuilder.prototype.constructor = StringBuilder;
+
 StringBuilder.prototype.plus = function(...str) {
     this.value += str.join("")
     return this
@@ -65,12 +66,25 @@ StringBuilder.prototype.minus = function(n) {
     return this
 }
 
+StringBuilder.prototype.minus = function(n) {
+    this.value = this.value.substring(0,this.value.length - n)
+    return this
+}
 
+StringBuilder.prototype.multiply = function(int) {
+    const repeatedString = this.value;
+    while (int > 1) {
+        this.value += repeatedString;
+        int--;
+    }
+    return this
+}
 
 let strBuilder = new StringBuilder('Hello'); // 'Hello';
 strBuilder
     .plus(' all', '!')
     .minus(4)
+    .multiply(3)
 
 // let intBuilder = new IntBuilder(10);
 // intBuilder

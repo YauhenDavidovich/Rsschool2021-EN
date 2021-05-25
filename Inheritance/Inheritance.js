@@ -42,7 +42,7 @@ class IntBuilder extends baseBuilder {
     }
 
     static random(from, to) {
-        return Math.floor(Math.random() * (to -from) + from);
+        return Math.floor(Math.random() * (to - from) + from);
     }
 
 }
@@ -52,26 +52,25 @@ function StringBuilder(value = '') {
 }
 
 
-
 StringBuilder.prototype = Object.create(baseBuilder.prototype);
 StringBuilder.prototype.constructor = StringBuilder;
 
-StringBuilder.prototype.plus = function(...str) {
+StringBuilder.prototype.plus = function (...str) {
     this.value += str.join("")
     return this
 }
 
-StringBuilder.prototype.minus = function(n) {
-    this.value = this.value.substring(0,this.value.length - n)
+StringBuilder.prototype.minus = function (n) {
+    this.value = this.value.substring(0, this.value.length - n)
     return this
 }
 
-StringBuilder.prototype.minus = function(n) {
-    this.value = this.value.substring(0,this.value.length - n)
+StringBuilder.prototype.minus = function (n) {
+    this.value = this.value.substring(0, this.value.length - n)
     return this
 }
 
-StringBuilder.prototype.multiply = function(int) {
+StringBuilder.prototype.multiply = function (int) {
     const repeatedString = this.value;
     while (int > 1) {
         this.value += repeatedString;
@@ -80,37 +79,20 @@ StringBuilder.prototype.multiply = function(int) {
     return this
 }
 
-StringBuilder.prototype.divide  = function(n) {
+StringBuilder.prototype.divide = function (n) {
     const divider = Math.floor(this.value.length / n)
     this.value = this.value.slice(0, divider)
     return this
 }
 
-StringBuilder.prototype.remove   = function(str) {
+StringBuilder.prototype.remove = function (str) {
     this.value = this.value.split(str).join('')
     return this
 }
 
+StringBuilder.prototype.sub = function (from, n) {
+    this.value = this.value.slice(from, from + n);
+    return this
+}
 
-let strBuilder = new StringBuilder('Hello'); // 'Hello';
-strBuilder
-    .plus(' all', '!')
-    .minus(4)
-    .multiply(3)
-    .divide(4)
-    .remove('l')
-
-
-// let intBuilder = new IntBuilder(10);
-// intBuilder
-//     .plus(2, 3, 2)
-//     .minus(1, 2)
-//     .multiply(2)
-//     .divide(4)
-//     .mod(5)
-//     .random(1,5)
-//
-//
-//
-console.log(strBuilder.get())
 

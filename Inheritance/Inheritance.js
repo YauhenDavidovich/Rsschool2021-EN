@@ -86,6 +86,11 @@ StringBuilder.prototype.divide  = function(n) {
     return this
 }
 
+StringBuilder.prototype.remove   = function(str) {
+    this.value = this.value.split(str).join('')
+    return this
+}
+
 
 let strBuilder = new StringBuilder('Hello'); // 'Hello';
 strBuilder
@@ -93,6 +98,7 @@ strBuilder
     .minus(4)
     .multiply(3)
     .divide(4)
+    .remove('l')
 
 
 // let intBuilder = new IntBuilder(10);

@@ -48,12 +48,23 @@ class IntBuilder extends baseBuilder {
 }
 
 function StringBuilder(value = '') {
-    SomeBuilder.call(this, value)
+    baseBuilder.call(this, value)
 }
 
-StringBuilder.prototype = Object.create(SomeBuilder.prototype);
-StringBuilder.prototype.constructor = StringBuilder;
 
+
+StringBuilder.prototype = Object.create(baseBuilder.prototype);
+StringBuilder.prototype.constructor = StringBuilder;
+StringBuilder.prototype.plus = function(...str) {
+    this.value += str.join("")
+    return this
+}
+
+
+
+let strBuilder = new StringBuilder('Hello'); // 'Hello';
+strBuilder
+    .plus(' all', '!')
 
 // let intBuilder = new IntBuilder(10);
 // intBuilder
@@ -66,5 +77,5 @@ StringBuilder.prototype.constructor = StringBuilder;
 //
 //
 //
-// console.log(intBuilder.get())
+console.log(strBuilder.get())
 

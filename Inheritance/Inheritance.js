@@ -60,11 +60,17 @@ StringBuilder.prototype.plus = function(...str) {
     return this
 }
 
+StringBuilder.prototype.minus = function(n) {
+    this.value = this.value.substring(0,this.value.length - n)
+    return this
+}
+
 
 
 let strBuilder = new StringBuilder('Hello'); // 'Hello';
 strBuilder
     .plus(' all', '!')
+    .minus(4)
 
 // let intBuilder = new IntBuilder(10);
 // intBuilder

@@ -1,4 +1,6 @@
-import ru from './ru.js';
-import en from './en.js';
+// eslint-disable-next-line import/extensions
+import ru from './ru-keyboard.js';
+// eslint-disable-next-line import/extensions
+import en from './en-keyboard.js';
 
 export default { ru, en };

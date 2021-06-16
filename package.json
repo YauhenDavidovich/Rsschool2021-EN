@@ -1,0 +1,25 @@
+{
+  "name": "yauhendavidovich-JSFEEN",
+  "version": "1.0.0",
+  "description": "Private repository for @yauhendavidovich",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN#readme",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}

@@ -1,12 +1,12 @@
 /**
  * @param {String} el
  * @param {String} classNames
- * @param {HTMLElement} child
+ * @param {HTMLElement} children
  * @param {HTMLElement} parent
  * @param  {...array} dataAttr
  */
 
-function createElement(el, classNames, children, parent, ...dataAttr) {
+export default function createElement(el, classNames, children, parent, ...dataAttr) {
   let element = null;
   try {
     element = document.createElement(el);
@@ -18,7 +18,7 @@ function createElement(el, classNames, children, parent, ...dataAttr) {
 
   if (children && Array.isArray(children)) {
     children.forEach((childElement) => childElement && element.appendChild(childElement));
-  } else if (children && typeof child === 'object') {
+  } else if (children && typeof children === 'object') {
     element.appendChild(children);
   } else if (children && typeof children === 'string') {
     element.innerHTML = children;
@@ -42,5 +42,3 @@ function createElement(el, classNames, children, parent, ...dataAttr) {
   }
   return element;
 }
-
-export default createElement;

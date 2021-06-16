@@ -3,14 +3,14 @@
 
 // eslint-disable-next-line no-unused-vars
 import * as storage from './languageSaver.js';
-import create from './elementsCreator.js';
+import createElement from './elementsCreator.js';
 import language from './layouts/index.js'; // { en, ru }
 import Key from './Key.js';
 
-const main = create('main', '',
-  [create('h1', 'title', 'RSS Virtual Keyboard'),
-    create('h3', 'subtitle', 'Keyboard that has been made with Vanilla JS'),
-    create('p', 'hint', 'Last language saves in localStorage')]);
+const main = createElement('main', '',
+  [createElement('h1', 'title', 'RSS Virtual Keyboard'),
+    createElement('h3', 'subtitle', 'Keyboard that has been made with Vanilla JS'),
+    createElement('p', 'hint', 'Last language saves in localStorage')]);
 
 export default class Keyboard {
   constructor(rowsOrder) {
@@ -21,13 +21,13 @@ export default class Keyboard {
 
   init(langCode) {
     this.keyBase = language[langCode];
-    this.output = create('textarea', 'output', null, main,
+    this.output = createElement('textarea', 'output', null, main,
       ['placeholder', 'Start type something...'],
       ['rows', 5],
       ['cols', 50],
       ['spellcheck', false],
       ['autocorrect', 'off']);
-    this.container = create('div', 'keyboard', null, main, ['language', langCode]);
+    this.container = createElement('div', 'keyboard', null, main, ['language', langCode]);
     document.body.prepend(main);
     return this;
   }
@@ -35,7 +35,7 @@ export default class Keyboard {
   generateLayout() {
     this.keyButtons = [];
     this.rowsOrder.forEach((row, i) => {
-      const rowElement = create('div', 'keyboard__row', null, this.container, ['row', i + 1]);
+      const rowElement = createElement('div', 'keyboard__row', null, this.container, ['row', i + 1]);
       rowElement.style.gridTemplateColumns = `repeat(${row.length}, 1fr)`;
       row.forEach((code) => {
         const keyObj = this.keyBase.find((key) => key.code === code);

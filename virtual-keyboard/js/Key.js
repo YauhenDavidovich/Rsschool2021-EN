@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import createElement from './elementsCreator';
+import createElement from './elementsCreator.js';
 
 export default class Key {
   constructor({ small, shift, code }) {

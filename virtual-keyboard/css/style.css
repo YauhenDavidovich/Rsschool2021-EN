@@ -102,3 +102,43 @@ main {
         background-position: 0 0;
     }
 }
+
+[data-fn="true"] > .letter {
+    font-size: 16px;
+}
+
+[data-code="CapsLock"] {
+    width: 86px;
+}
+
+[data-code="ShiftLeft"] {
+    width: 100px;
+}
+
+[data-code="ShiftRight"] {
+    width: 120px;
+}
+
+[data-code="Enter"] {
+    width: 100px;
+}
+
+[data-code="Tab"] {
+    width: 76px;
+}
+
+[data-code="ControlLeft"] {
+    width: 76px;
+}
+
+[data-code="ControlRight"] {
+    width: 60px;
+}
+
+[data-code="Backspace"] {
+    width: 115px;
+}
+
+[data-code="Space"] {
+    width: 420px;
+}

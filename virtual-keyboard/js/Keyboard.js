@@ -46,5 +46,15 @@ export default class Keyboard {
         }
       });
     });
+    document.addEventListener('keydown', this.handleEvent);
+    document.addEventListener('keyup', this.handleEvent);
+  }
+
+  handleEvent = (event) => {
+    if (event.stopPropagation) event.stopPropagation();
+    const { code, type } = event;
+    const keyObj = this.keyButtons.find((key) => key.code === code);
+    if (!keyObj) return; // check whether button is in button set
+    this.output.focus();
   }
 }

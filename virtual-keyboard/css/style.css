@@ -22,11 +22,6 @@ main {
     overflow: hidden;
     background: #031321;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border: 3px solid #222;
 }
 
 .keyboard__row {
@@ -51,7 +46,7 @@ main {
 }
 
 .keyboard__key.active:after {
-    background: #766f6d;
+    background: #7e7774;
 }
 
 .keyboard__key:hover:before {
@@ -141,10 +136,6 @@ main {
     text-align: left;
     padding-left: 10px;
     transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
 }
 
 .sub.sub-active:not(:empty) {
@@ -182,4 +173,23 @@ textarea.output {
     width: 100%;
     text-align: center;
     transition: all .2s ease;
+}
+
+[data-fn="false"].active .letter,
+[data-fn="true"].active .letter {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
 }

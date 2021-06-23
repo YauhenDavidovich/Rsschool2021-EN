@@ -67,11 +67,13 @@ main {
     border-radius: 5px;
 }
 
-.keyboard__key:active {
-    color: #000
+.keyboard__key:active:after {
+    background: transparent;
+
 }
 
-.keyboard__key:active:after {
+
+.keyboard__key.active:after {
     background: transparent;
 }
 

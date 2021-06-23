@@ -144,3 +144,34 @@ main {
 [data-code="Space"] {
     width: 420px;
 }
+
+.sub {
+    width: 100%;
+    color: #68688a;
+    text-align: left;
+    padding-left: 10px;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+.sub.sub-active:not(:empty) {
+    color: rgb(19, 80, 0);
+    font-size: 23px;
+}
+
+.sub.sub-active:not(:empty) ~ .letter.sub-inactive {
+    color: #68688a;
+    font-size: 16px;
+    text-align: center;
+    padding-right: 10px;
+    width: 50%;
+    transform-origin: center;
+    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+}

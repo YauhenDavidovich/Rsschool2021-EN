@@ -48,7 +48,18 @@ export default class Keyboard {
     });
     document.addEventListener('keydown', this.handleEvent);
     document.addEventListener('keyup', this.handleEvent);
+    this.container.onmousedown = this.preHandleEvent;
+    this.container.onmouseup = this.preHandleEvent;
   }
+
+    preHandleEvent = (event) => {
+      event.stopPropagation();
+      const keyDiv = event.target.closest('.keyboard__key');
+      if (!keyDiv) return;
+      const { dataset: { code } } = keyDiv;
+      keyDiv.addEventListener('mouseleave', this.resetButtonState);
+      this.handleEvent({ code, type: event.type });
+    };
 
     handleEvent = (event) => {
       if (event.stopPropagation) event.stopPropagation();
@@ -60,7 +71,7 @@ export default class Keyboard {
       if (type.match(/keydown|mousedown/)) {
         // eslint-disable-next-line no-debugger
         debugger;
-        if (type.match(/mouse/)) event.preventDefault();
+        if (type.match(/key/)) event.preventDefault();
 
         if (code.match(/Shift/)) this.shiftKey = true;
         if (this.shiftKey) this.switchUpperCase(true);

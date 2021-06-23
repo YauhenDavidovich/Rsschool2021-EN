@@ -50,7 +50,11 @@ main {
     border-radius: 10px;
 }
 
-.keyboard__key:before {
+.keyboard__key.active:after {
+    background: #766f6d;
+}
+
+.keyboard__key:hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -62,22 +66,8 @@ main {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
-    opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 5px;
-}
-
-.keyboard__key:active:after {
-    background: transparent;
-
-}
-
-
-.keyboard__key.active:after {
-    background: transparent;
-}
-
-.keyboard__key:hover:before {
     opacity: 1;
 }
 
@@ -158,7 +148,7 @@ main {
 }
 
 .sub.sub-active:not(:empty) {
-    color: rgb(19, 80, 0);
+    color: #fff78c;
     font-size: 23px;
 }
 
@@ -174,4 +164,22 @@ main {
     -moz-transform: translateX(20px);
     -ms-transform: translateX(20px);
     -o-transform: translateX(20px);
+}
+
+textarea.output {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.letter {
+    font-size: 21px;
+    width: 100%;
+    text-align: center;
+    transition: all .2s ease;
 }

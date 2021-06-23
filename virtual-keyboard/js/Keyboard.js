@@ -61,6 +61,25 @@ export default class Keyboard {
       this.handleEvent({ code, type: event.type });
     };
 
+    resetButtonState = ({ target: { dataset: { code } } }) => {
+      if (code.match('Shift')) {
+        this.shiftKey = false;
+        this.switchUpperCase(false);
+        this.keysPressed[code].div.classList.remove('active');
+      }
+      if (code.match(/Control/)) this.ctrKey = false;
+      if (code.match(/Alt/)) this.altKey = false;
+      this.resetPressedButtons(code);
+      this.output.focus();
+    }
+
+    resetPressedButtons = (targetCode) => {
+      if (!this.keysPressed[targetCode]) return;
+      if (!this.isCaps) this.keysPressed[targetCode].div.classList.remove('active');
+      this.keysPressed[targetCode].div.removeEventListener('mouseleave', this.resetButtonState);
+      delete this.keysPressed[targetCode];
+    }
+
     handleEvent = (event) => {
       if (event.stopPropagation) event.stopPropagation();
       const { code, type } = event;
@@ -69,8 +88,6 @@ export default class Keyboard {
       this.output.focus();
 
       if (type.match(/keydown|mousedown/)) {
-        // eslint-disable-next-line no-debugger
-        debugger;
         if (type.match(/key/)) event.preventDefault();
 
         if (code.match(/Shift/)) this.shiftKey = true;

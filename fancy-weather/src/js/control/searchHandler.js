@@ -3,10 +3,9 @@ import showBG from '../view/renderBG.js';
 import mapPanTo from './mapPan.js';
 import renderWeather from '../view/renderWeather.js';
 import getForecast from '../api/getForecast.js';
-import getTags from '../getTags.js';
 import getTimezone from '../api/getTimezone.js';
 
-import { getDateTime } from '../utils.js';
+import { getDateTime, getTags } from '../utils.js';
 import MAP from '../Map.js';
 
 export default async function searchHandler(e, map, meas, timeInterval) {

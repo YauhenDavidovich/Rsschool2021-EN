@@ -1,7 +1,7 @@
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import renderError from '../view/renderError.js';
 
-export default async function getImageURL(tags) {
+export default async function getImage(tags) {
   const [season, daytime, forecast] = tags;
 
   const API_TOKEN = '9901f3d791ae58afaab6db157f0875f3';

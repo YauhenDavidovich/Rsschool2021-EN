@@ -1,5 +1,5 @@
-import getImageURL from '../api/getImageURL.js';
-import showBG from '../view/showBG.js';
+import getImageURL from '../api/getImage.js';
+import showBG from '../view/renderBG.js';
 
 export default async function refreshHandler(tags) {
   const iconRefresh = document.querySelector('.icon-refresh');

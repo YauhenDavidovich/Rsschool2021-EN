@@ -1,4 +1,4 @@
-import MAP from '../MAP.js';
+import MAP from '../Map.js';
 import { getGeocode } from '../api/getMap.js';
 import { toFahrenheit } from '../utils.js';
 

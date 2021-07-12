@@ -1,4 +1,4 @@
-import MAP from '../MAP.js';
+import MAP from '../Map.js';
 
 export default function renderForm(lang = 'en', meas = 'C') {
   const [search, placeholder] = MAP[lang].other;

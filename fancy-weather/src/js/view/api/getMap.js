@@ -1,5 +1,5 @@
 import ymaps from 'ymaps';
-import MAP from '../MAP.js';
+import MAP from '../Map.js';
 import renderError from '../view/renderError.js';
 
 async function getMaps(lang) {

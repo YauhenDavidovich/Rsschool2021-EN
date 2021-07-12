@@ -7,7 +7,7 @@ export default async function getForecast(loc) {
   const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&${longitude}&lang=eng&appid=${API_TOKEN}&units=metric`;
 
   try {
-    const forecast = await fetch(proxyUrl + URL).then(res => res.json());
+    const forecast = await fetch(URL).then(res => res.json());
     return forecast;
   } catch (err) {
     err.name = 'Forecast Error';

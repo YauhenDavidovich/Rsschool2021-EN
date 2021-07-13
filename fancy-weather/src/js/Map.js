@@ -169,10 +169,6 @@ const MAP = {
      'Clouds':['scattered,clouds'],
      'Hase':['mist'],
 
-
-
-
-
       'clear sky': ['clear-sky-night','clear,sky,day' ],
       'few clouds': ['few-clouds-night','few-clouds-night'],
       'scattered clouds': ['scattered-clouds-night','scattered-clouds-day'],

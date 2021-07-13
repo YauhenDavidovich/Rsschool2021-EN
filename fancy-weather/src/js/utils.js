@@ -34,14 +34,16 @@ export function getDateTime(gmtOffset = 10800) {
   return dateTime;
 }
 
-export function getTags(curr) {
-  const { time, icon } = curr;
+export function getTags(curr) {  
+  const time = curr.current.dt
+  const icon = curr.current.weather[0].main 
 
   const date = new Date(time * 1000);
   const month = date.getMonth();
   const hours = date.getHours();
 
   const weather = MAP.icon[icon][1];
+  debugger
 
   let dayTime;
   if (hours >= 8 && hours <= 20) {

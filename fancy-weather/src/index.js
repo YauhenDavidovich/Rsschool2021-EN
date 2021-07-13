@@ -18,9 +18,10 @@ async function init() {
   const location = await getUserLocation();
 
   const forecast = await getForecast(location);
-  const { currently } = forecast;
+  debugger
+  
 
-  const tags = getTags(currently);
+  const tags = getTags(forecast);
   const imageURL = await getImage(tags);
 
   const timeInterval = await renderFrame(

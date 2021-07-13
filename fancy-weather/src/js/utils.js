@@ -42,7 +42,7 @@ export function getTags(curr) {
   const month = date.getMonth();
   const hours = date.getHours();
 
-  const weather = MAP.icon[icon][1];
+  const weather = curr.current.weather[0].main 
   debugger
 
   let dayTime;

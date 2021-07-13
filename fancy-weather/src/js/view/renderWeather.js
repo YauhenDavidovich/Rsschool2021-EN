@@ -1,6 +1,10 @@
 import MAP from '../Map.js';
-import { getGeocode } from '../api/getMap.js';
-import { toFahrenheit } from '../utils.js';
+import {
+  getGeocode
+} from '../api/getMap.js';
+import {
+  toFahrenheit
+} from '../utils.js';
 
 export default async function renderWeather(
   forecastData,
@@ -10,10 +14,10 @@ export default async function renderWeather(
 ) {
   const today = new Date();
   const dayOfWeek = today.getDay();
-  const langArray = MAP[lang];   
+  const langArray = MAP[lang];
 
   let currTemp;
-  let apparentTemp;  
+  let apparentTemp;
   switch (meas) {
     case 'C':
       currTemp = Math.round(forecastData.current.temp);
@@ -27,7 +31,10 @@ export default async function renderWeather(
       break;
   }
 
-  const { latitude, longitude } = location;
+  const {
+    latitude,
+    longitude
+  } = location;
   const geo = await getGeocode([latitude, longitude], lang);
   const res = geo.geoObjects.get(0).properties.getAll().balloonContentBody;
 
@@ -43,11 +50,14 @@ export default async function renderWeather(
 
   const forecastShort = document.createElement('span');
   forecastShort.classList.add('forecast-short');
-  forecastShort.textContent = langArray.weather[forecastData.current.weather[0].description];
+  const forecastShortResponse = forecastData.current.weather[0].description;
+  debugger
+  forecastShort.textContent = langArray.weather[forecastShortResponse];
 
   const mainIcon = document.createElement('i');
-  const mainIconName = MAP.icon[forecastData.current.weather[0].description][0];
-  mainIcon.classList.value = `wi ${mainIconName} icon-main`;
+  const mainIconCode = forecastData.current.weather[0].icon
+  mainIcon.innerHTML = `<img src='http://openweathermap.org/img/wn/${mainIconCode}@2x.png'>`
+  mainIcon.classList.value = `icon-main`;
 
   const forecastCurrent = document.createElement('div');
   forecastCurrent.classList.add('forecast-current');
@@ -78,7 +88,9 @@ export default async function renderWeather(
   forecastDetail.classList.add('forecast-detail');
   forecastDetail.append(feelsSpan, windSpan, humiditySpan);
 
-  const { week } = MAP[lang];
+  const {
+    week
+  } = MAP[lang];
 
   const fragment = document.createDocumentFragment();
 
@@ -119,11 +131,14 @@ export default async function renderWeather(
     spanTempLow.classList.add('forecast-daily__temp-low');
     spanTempLow.textContent = `${temperatureLow}°`;
 
+
     const icon = document.createElement('i');
-    const iconResp = forecastData.daily[i].weather[0].main
-    debugger
-    const iconName = MAP.icon[iconResp][0];
-    icon.classList.value = `wi ${iconName} forecast-daily__icon`;
+    const iconCode = forecastData.daily[i].weather[0].icon
+    icon.innerHTML = `<img src='http://openweathermap.org/img/wn/${iconCode}.png'>`
+    // const iconResp = forecastData.daily[i].weather[0].main
+    // debugger
+    // const iconName = MAP.icon[iconResp][0];
+    // icon.classList.value = `wi ${iconName} forecast-daily__icon`;
 
     el.append(spanDay, icon, spanTempHight, spanTempLow);
     fragment.appendChild(el);

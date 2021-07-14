@@ -12,8 +12,8 @@ export default async function searchHandler(e, map, meas, timeInterval) {
   e.preventDefault();
   clearInterval(timeInterval);
 
-  const lang = document.querySelector('.lang-select').value.toLowerCase(); 
-  const coords = await mapPan(map, lang);  
+  const lang = document.querySelector('.lang-select').value.toLowerCase();
+  const coords = await mapPan(map, lang);
   const location = { latitude: coords[0], longitude: coords[1] };
 
   document.querySelector('.latitude').textContent = `${
@@ -28,7 +28,8 @@ export default async function searchHandler(e, map, meas, timeInterval) {
   forecastWrapper.innerHTML = '';
   forecastWrapper.classList.add('dual-ring');
 
-  const currently = await getForecast(location);  
+  const forecast = await getForecast(location);
+  const currently = forecast;
   const newTags = getTags(currently);
   const newImageURL = await getImageURL(newTags);
   showBG(newImageURL);

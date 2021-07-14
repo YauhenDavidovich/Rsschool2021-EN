@@ -1,7 +1,6 @@
 import renderError from '../view/renderError.js';
 
 export default async function getForecast(loc) {
-  // https://api.openweathermap.org/data/2.5/onecall?lat=30&lon=50}&exclude=curent,daily&lang=eng&appid=094d2f01c9172cdbf32222e4fee342c6&units=metric
   const API_TOKEN = '094d2f01c9172cdbf32222e4fee342c6';
   const { latitude, longitude } = loc;
 

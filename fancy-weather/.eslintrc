@@ -1,27 +1,13 @@
 {
   "env": {
-    "browser": true
+    "browser": true    
   },
-  "extends": ["airbnb-base", "eslint:recommended"],
+  "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],   
-    "import/extensions": [
-      "error",
-      "always",
-      {
-        "ignorePackages": true
-      }
-    ],
-    "linebreak-style": 0,
-    "trailing-comma": [true, {
-      "singleline": "never",
-      "multiline": {
-        "objects": "always",     // <==================
-        "arrays": "always",
-        "functions": "never",
-        "typeLiterals": "ignore"
-      }
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/extensions": ["error", "always", {
+      "ignorePackages": true
     }]
   }
 }

@@ -2,10 +2,10 @@ import renderError from '../view/renderError.js';
 
 export default async function getTimezone({ latitude, longitude }) {
   const API_KEY = '9UY1DWOZY2QT';
-  const URL = `http://api.timezonedb.com/v2.1/get-time-zone?key=${API_KEY}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
+  const URL = `https://api.timezonedb.com/v2.1/get-time-zone?key=${API_KEY}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
 
   try {
-    const data = await fetch(URL).then(res => res.json());
+    const data = await fetch(URL).then((res) => res.json());
     return data;
   } catch (err) {
     err.name = 'Timezone API Error';

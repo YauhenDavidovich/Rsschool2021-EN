@@ -1,3 +1,6 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable prettier/prettier */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -13,7 +16,7 @@ const devServer = (isDev) => !isDev ? {} : {
   },
 };
 
-const esLintPlugin = (isDev) => isDev ? [] : [ new ESLintPlugin({ extensions: ['ts', 'js'] }) ];
+const esLintPlugin = (isDev) => isDev ? [] : [new ESLintPlugin({ extensions: ['ts', 'js'] })];
 
 module.exports = ({ development }) => ({
   mode: development ? 'development' : 'production',
@@ -54,7 +57,7 @@ module.exports = ({ development }) => ({
   plugins: [
     ...esLintPlugin(development),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
-    new HtmlWebpackPlugin({ template: './src/index.html' , favicon: './src/favicon.ico'}),
+    new HtmlWebpackPlugin({ template: './src/index.html', favicon: './src/favicon.ico'}),
     new CopyPlugin({
       patterns: [{
         from: 'public',
@@ -66,5 +69,6 @@ module.exports = ({ development }) => ({
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  // eslint-disable-next-line comma-dangle
   ...devServer(development)
 });

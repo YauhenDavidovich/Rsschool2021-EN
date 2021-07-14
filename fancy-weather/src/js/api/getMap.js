@@ -83,7 +83,6 @@ export async function mapPan(map, lang) {
   const searchValue = inputEl.value.toString();
 
   try {
-    debugger
     const geocode = await getGeocode(searchValue, lang);
 
     const coords = geocode.geoObjects.get(0).geometry.getCoordinates();

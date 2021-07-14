@@ -14,7 +14,7 @@ export default function speachHandler() {
       langFormatted = 'ru-RU';
       break;
     case 'be':
-      langFormatted = 'en-US';
+      langFormatted = 'en-RU';
       break;
     default:
       break;

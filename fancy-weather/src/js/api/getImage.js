@@ -5,7 +5,7 @@ export default async function getImage(tags) {
   const [season, daytime, forecast] = tags;
 
   const API_TOKEN = '9901f3d791ae58afaab6db157f0875f3';
-  const URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_TOKEN}&tags='${season},${daytime},${forecast}'&tag_mode=all&sort=relevance&format=json&nojsoncallback=1`;
+  const URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_TOKEN}&tags='${season},${daytime},${forecast}'&tag_mode=all&sort=relevance&per_page=50&format=json&nojsoncallback=1`;
 
   try {
     const data = await fetch(URL).then((res) => res.json());

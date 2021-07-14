@@ -24,8 +24,8 @@ export default async function renderWeather(
       apparentTemp = Math.round(Math.round(forecastData.current.feels_like));
       break;
     case 'F':
-      currTemp = toFahrenheit(forecastData.current.main.temp);
-      apparentTemp = toFahrenheit(forecastData.current.main.feels_like);
+      currTemp = toFahrenheit(forecastData.current.temp);
+      apparentTemp = toFahrenheit(forecastData.current.feels_like);
       break;
     default:
       break;

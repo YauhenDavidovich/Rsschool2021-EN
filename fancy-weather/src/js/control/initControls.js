@@ -36,7 +36,8 @@ export default function initControls(tags, map, meas, timeInterval) {
   });
 
   buttonSearch.addEventListener('click', e => {
-    searchHandler(e, map, meas, newInterval).then(res => {
+    debugger
+    searchHandler(e, map, meas, newInterval, tags).then(res => {
       newInterval = res.newInterval;
       newTags = res.newTags;
     });

@@ -1,6 +1,6 @@
 import getImageURL from '../api/getImage.js';
 import showBG from '../view/renderBG.js';
-import mapPanTo from './mapPan.js';
+import mapPan from './mapPan.js';
 import renderWeather from '../view/renderWeather.js';
 import getForecast from '../api/getForecast.js';
 import getTimezone from '../api/getTimezone.js';
@@ -12,9 +12,8 @@ export default async function searchHandler(e, map, meas, timeInterval) {
   e.preventDefault();
   clearInterval(timeInterval);
 
-  const lang = document.querySelector('.lang-select').value.toLowerCase();
-
-  const coords = await mapPanTo(map, lang);
+  const lang = document.querySelector('.lang-select').value.toLowerCase(); 
+  const coords = await mapPan(map, lang);  
   const location = { latitude: coords[0], longitude: coords[1] };
 
   document.querySelector('.latitude').textContent = `${
@@ -29,9 +28,7 @@ export default async function searchHandler(e, map, meas, timeInterval) {
   forecastWrapper.innerHTML = '';
   forecastWrapper.classList.add('dual-ring');
 
-  const forecast = await getForecast(location);
-  const { currently } = forecast;
-
+  const currently = await getForecast(location);  
   const newTags = getTags(currently);
   const newImageURL = await getImageURL(newTags);
   showBG(newImageURL);

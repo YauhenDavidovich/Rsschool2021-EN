@@ -1,6 +1,6 @@
 import { getGeocode } from '../api/getMap.js';
 
-export default async function mapPanTo(map, lang) {
+export default async function mapPan(map, lang) {
   const inputEl = document.querySelector('.input-search');
   const searchValue = inputEl.value.toString();
 

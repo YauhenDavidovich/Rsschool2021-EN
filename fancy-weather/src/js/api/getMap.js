@@ -83,6 +83,7 @@ export async function mapPan(map, lang) {
   const searchValue = inputEl.value.toString();
 
   try {
+    debugger
     const geocode = await getGeocode(searchValue, lang);
 
     const coords = geocode.geoObjects.get(0).geometry.getCoordinates();
@@ -92,11 +93,11 @@ export async function mapPan(map, lang) {
     return coords;
   } catch (err) {
     err.name = 'getGeocode API Error';
-    err.message = `interesting place: ${searchValue}. It can't be cured without magic`;
+    err.message = `interesting place: ${searchValue}. Try again, please`;
     renderError(err);
 
     document.querySelector('.error-button').addEventListener('click', () => {
-      document.location.reload();
+      inputEl.value = '';
     });
 
     throw new Error(`${err.name}(${err.code}): ${err.message}`);

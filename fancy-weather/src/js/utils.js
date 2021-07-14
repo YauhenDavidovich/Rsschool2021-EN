@@ -35,8 +35,9 @@ export function getDateTime(gmtOffset = 10800) {
 }
 
 export function getTags(curr) {  
+  debugger
   const time = curr.current.dt
-  const icon = curr.current.weather[0].main 
+  // const icon = curr.current.weather[0].main 
 
   const date = new Date(time * 1000);
   const month = date.getMonth();

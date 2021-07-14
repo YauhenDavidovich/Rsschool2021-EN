@@ -16,11 +16,7 @@ const meas = localStorage.getItem('meas') || 'C';
 
 async function init() {
   const location = await getUserLocation();
-
   const forecast = await getForecast(location);
-  debugger
-  
-
   const tags = getTags(forecast);
   const imageURL = await getImage(tags);
 

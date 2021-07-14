@@ -141,6 +141,9 @@ body {
   }
 
   .forecast-current {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 6rem;
   }
 
@@ -308,8 +311,8 @@ body {
     height: 400px;
     margin: 50px;
 
-    border: 6px solid #ffffff;
-    border-color: #ffffff transparent #ffffff transparent;
+    border: 6px solid #727272;
+    border-color: #727171 transparent #ccc9c9 transparent;
     border-radius: 50%;
 
     animation: dual-ring-anime 1.2s linear infinite;
@@ -414,3 +417,135 @@ body {
   }
 }
 
+@keyframes mic-anime {
+  0% {
+    font-size: 1rem;
+    color: red;
+
+    transform: rotate(0deg);
+  }
+
+  33% {
+    color: blue;
+  }
+
+  50% {
+    font-size: 2rem;
+  }
+
+  66% {
+    color: yellowgreen;
+  }
+
+  100% {
+    font-size: 1rem;
+    color: red;
+
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dual-ring-anime {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dotFloating {
+  0% {
+    left: calc(-50% - 5px);
+  }
+
+  75% {
+    left: calc(50% + 105px);
+  }
+
+  100% {
+    left: calc(50% + 105px);
+  }
+}
+
+@keyframes dotFloatingBefore {
+  0% {
+    left: -50px;
+  }
+
+  50% {
+    left: -12px;
+  }
+
+  75% {
+    left: -50px;
+  }
+
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes dotFloatingAfter {
+  0% {
+    left: -100px;
+  }
+
+  50% {
+    left: -24px;
+  }
+
+  75% {
+    left: -100px;
+  }
+
+  100% {
+    left: -100px;
+  }
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .wrapper {
+    justify-content: center;
+  }
+
+  .map-wrapper,
+  .forecast-wrapper {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input-wrapper {
+      margin: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .map-wrapper {
+    width: 100%;
+  }
+}

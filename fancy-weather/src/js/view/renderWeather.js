@@ -43,7 +43,8 @@ export default async function renderWeather(
 
   const forecastShort = document.createElement('span');
   forecastShort.classList.add('forecast-short');
-  const forecastShortResponse = forecastData.current.weather[0].description;
+  const forecastShortResponse =
+    forecastData.current.weather[0].description.toLowerCase();
   forecastShort.textContent = langArray.weather[forecastShortResponse];
 
   const mainIcon = document.createElement('i');

@@ -1,0 +1,37 @@
+{
+  "name": "custom-lodash",
+  "version": "1.0.0",
+  "description": "Custom lodash library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --collect-coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN/tree/custom-lodash.git"
+  },
+  "keywords": [
+    "Javascript"
+  ],
+  "author": "Yauhen Davidovich<davidovich336@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN/tree/custom-lodash/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/yauhendavidovich-JSFEEN/tree/custom-lodash#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}

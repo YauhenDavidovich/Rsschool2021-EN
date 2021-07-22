@@ -1,9 +1,18 @@
-function take(arr, num = 1) {
-    if (!Array.isArray(arr)) {
-        throw new TypeError(`${arr} is not an array`);
+const pushToArray = (array, ...elements) => [...array, ...elements];
+const take = (array, n = 1) => {
+    if(n === 0) return [];
+    if(n === 1) return [array[0]];
+
+    let i = 0;
+    let takeArray = [];
+
+    for (let value of array) {
+        takeArray = pushToArray(takeArray, value);
+        i++;
+        if(i >= n) return takeArray;
     }
 
-    return arr.filter((el, i) => i < num);
+    return array;
 }
 
-export default take
+export default take;
